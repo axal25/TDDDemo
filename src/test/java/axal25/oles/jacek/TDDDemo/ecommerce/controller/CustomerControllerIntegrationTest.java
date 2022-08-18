@@ -1,6 +1,6 @@
 package axal25.oles.jacek.TDDDemo.ecommerce.controller;
 
-import axal25.oles.jacek.TDDDemo.ecommerce.entity.CustomerEntity;
+import axal25.oles.jacek.TDDDemo.ecommerce.data.entity.CustomerEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +26,9 @@ public class CustomerControllerIntegrationTest {
         ResponseEntity<String> expectedResult = new ResponseEntity<>("success", HttpStatus.CREATED);
 
         CustomerEntity inputCustomerEntity = new CustomerEntity();
-        inputCustomerEntity.setId(1);
-        inputCustomerEntity.setIdPerson(2);
-        inputCustomerEntity.setIdOrganization(3);
+        inputCustomerEntity.setId(777);
+        inputCustomerEntity.setIdPerson(3);
+        inputCustomerEntity.setIdOrganization(2);
 
         ResponseEntity<String> actualResult = customerController.add(inputCustomerEntity);
 

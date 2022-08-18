@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataset>
-    <ECOMMERCE.CUSTOMERS ID="1"/>
+    <customers id="1" id_person="1" id_organization="1"/>
 </dataset>

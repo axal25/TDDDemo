@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <!--    <property name="schema">ECOMMERCE</property>-->
+    <!--    <customers id="1" id_person="1" id_organization="1"/>-->
+    <!--    <ECOMMERCE.customers id="1"/>-->
+    <!--    <ecommerce.customers id="1" id_person="1" id_organization="1"/>-->
+    <ECOMMERCE.CUSTOMERS id="1" id_person="1" id_organization="1"/>
+</dataset>

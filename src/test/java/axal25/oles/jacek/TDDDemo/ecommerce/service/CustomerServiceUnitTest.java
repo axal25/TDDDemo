@@ -1,7 +1,7 @@
 package axal25.oles.jacek.TDDDemo.ecommerce.service;
 
-import axal25.oles.jacek.TDDDemo.ecommerce.entity.CustomerEntity;
-import axal25.oles.jacek.TDDDemo.ecommerce.repository.CustomerRepository;
+import axal25.oles.jacek.TDDDemo.ecommerce.data.entity.CustomerEntity;
+import axal25.oles.jacek.TDDDemo.ecommerce.data.repository.CustomerRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -26,7 +26,7 @@ public class CustomerServiceUnitTest {
     private CustomerService customerService;
 
     @BeforeEach
-    public void setup() {
+    public void beforeEach() {
         MockitoAnnotations.openMocks(this);
     }
 

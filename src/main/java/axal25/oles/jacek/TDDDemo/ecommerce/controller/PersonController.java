@@ -1,7 +1,7 @@
 package axal25.oles.jacek.TDDDemo.ecommerce.controller;
 
-import axal25.oles.jacek.TDDDemo.ecommerce.data.entity.CustomerEntity;
-import axal25.oles.jacek.TDDDemo.ecommerce.service.CustomerService;
+import axal25.oles.jacek.TDDDemo.ecommerce.data.entity.PersonEntity;
+import axal25.oles.jacek.TDDDemo.ecommerce.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -10,18 +10,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping(value = "/customers")
-class CustomerController {
+@RequestMapping(value = "/persons")
+class PersonController {
 
     @Autowired
-    private CustomerService customerService;
+    private PersonService personService;
 
     // web browser http://localhost:8080/customers
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    ResponseEntity<Iterable<CustomerEntity>> getAll() {
+    ResponseEntity<Iterable<PersonEntity>> getAll() {
         return new ResponseEntity<>(
-                customerService.getAll(),
+                personService.getAll(),
                 HttpStatus.OK
         );
     }
@@ -31,8 +31,8 @@ class CustomerController {
             produces = MediaType.TEXT_PLAIN_VALUE
     )
     @ResponseBody
-    ResponseEntity<String> add(@RequestBody CustomerEntity customerEntity) {
-        return customerService.add(customerEntity) != null
+    ResponseEntity<String> add(@RequestBody PersonEntity personEntity) {
+        return personService.add(personEntity) != null
                 ? new ResponseEntity<>("success", HttpStatus.CREATED)
                 : new ResponseEntity<>("failure", HttpStatus.BAD_REQUEST);
     }

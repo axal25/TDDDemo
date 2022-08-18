@@ -1,6 +1,6 @@
 package axal25.oles.jacek.TDDDemo.ecommerce.service;
 
-import axal25.oles.jacek.TDDDemo.ecommerce.entity.CustomerEntity;
+import axal25.oles.jacek.TDDDemo.ecommerce.data.entity.CustomerEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,17 +19,17 @@ public class CustomerServiceIntegrationTest {
 
     @Test
     public void addTestPositive() {
-        CustomerEntity inputContact = new CustomerEntity();
-        inputContact.setId(1);
-        inputContact.setIdPerson(2);
-        inputContact.setIdOrganization(3);
+        CustomerEntity inputCustomerEntity = new CustomerEntity();
+        inputCustomerEntity.setId(1);
+        inputCustomerEntity.setIdPerson(3);
+        inputCustomerEntity.setIdOrganization(2);
 
-        CustomerEntity returnedContact = customerService.add(inputContact);
+        CustomerEntity returnedCustomerEntity = customerService.add(inputCustomerEntity);
 
-        assertNotNull(returnedContact);
-        assertNotNull(returnedContact.getId());
-        assertEquals(inputContact.getId(), returnedContact.getId());
-        assertEquals(inputContact.getIdPerson(), returnedContact.getIdPerson());
-        assertEquals(inputContact.getIdOrganization(), returnedContact.getIdOrganization());
+        assertNotNull(returnedCustomerEntity);
+        assertNotNull(returnedCustomerEntity.getId());
+        assertEquals(inputCustomerEntity.getId(), returnedCustomerEntity.getId());
+        assertEquals(inputCustomerEntity.getIdPerson(), returnedCustomerEntity.getIdPerson());
+        assertEquals(inputCustomerEntity.getIdOrganization(), returnedCustomerEntity.getIdOrganization());
     }
 }

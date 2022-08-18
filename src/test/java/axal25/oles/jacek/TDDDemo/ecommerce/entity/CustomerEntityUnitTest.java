@@ -1,5 +1,6 @@
 package axal25.oles.jacek.TDDDemo.ecommerce.entity;
 
+import axal25.oles.jacek.TDDDemo.ecommerce.data.entity.CustomerEntity;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
